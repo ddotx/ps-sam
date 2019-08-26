@@ -1,14 +1,17 @@
 AWSTemplateFormatVersion: '2010-09-09'
+Globals:
+  Api:
+    Cors: AllowMethods:"'*'" AllowHeaders:"'*'" AllowOrigin:"'*'"
 Resources:
-  BookTable:
+  BookTableCors:
     Type: AWS::Serverless::SimpleTable
-  Books:
+  BooksCors:
     Properties:
       CodeUri: s3://artifacts-for-lambda-ddotx/ac84681befe8c838ccf5e074cab9156a
       Environment:
         Variables:
           TABLE_NAME:
-            Ref: BookTable
+            Ref: BookTableCors
       Events:
         AddBook:
           Properties:

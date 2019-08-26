@@ -1,9 +1,9 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Transform: "AWS::Serverless-2016-10-31"
 Resources:
-  BookTable:
+  BookTableCors:
     Type: AWS::Serverless::SimpleTable
-  Books:
+  BooksCors:
     Type: "AWS::Serverless::Function"
     Properties:
       Runtime: nodejs8.10
@@ -11,7 +11,7 @@ Resources:
       CodeUri: ./api
       Environment:
         Variables:
-          TABLE_NAME: !Ref BookTable
+          TABLE_NAME: !Ref BookTableCors
       Policies: AmazonDynamoDBFullAccess
 
       Events:
@@ -30,3 +30,9 @@ Resources:
           Properties:
             Path: /books/{id}
             Method: any
+Globals:
+  Api:
+    Cors:
+      AllowMethods:"'*'"
+      AllowHeaders:"'*'"
+      AllowOrigin:"'*'"
