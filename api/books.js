@@ -9,6 +9,8 @@ exports.handler = (event, context, callback) => {
 	const id = event.pathParameters ? event.pathParameters.id : null;
 	const { TABLE_NAME } = process.env;
 
+//TODO: Request --> Marshall==> DynamoDB ==> Unmarshall --> Response
+
 	switch (event.httpMethod) {
 		// add a book to the library
 		case "POST":

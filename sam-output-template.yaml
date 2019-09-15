@@ -4,7 +4,7 @@ Resources:
     Type: AWS::Serverless::SimpleTable
   Books:
     Properties:
-      CodeUri: s3://artifacts-for-lambda-ddotx/ac84681befe8c838ccf5e074cab9156a
+      CodeUri: s3://artifacts-for-lambda-ddotx/3d3a7e1469055567f29f9e0910bb32ab
       Environment:
         Variables:
           TABLE_NAME:

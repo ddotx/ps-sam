@@ -7,7 +7,7 @@ Resources:
       Runtime: nodejs8.10
       Handler: index.handler
       CodeUri:
-        #Bucket: artifacts-for-lambda
+        #Bucket: artifacts-for-lambda-ddotx
         #Key: my-lambda-package.zip
         ./src
 

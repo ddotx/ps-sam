@@ -13,7 +13,6 @@ Resources:
         Variables:
           TABLE_NAME: !Ref BookTable
       Policies: AmazonDynamoDBFullAccess
-
       Events:
         AddBook:
           Type: Api

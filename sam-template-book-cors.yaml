@@ -13,7 +13,6 @@ Resources:
         Variables:
           TABLE_NAME: !Ref BookTableCors
       Policies: AmazonDynamoDBFullAccess
-
       Events:
         AddBook:
           Type: Api
@@ -33,6 +32,6 @@ Resources:
 Globals:
   Api:
     Cors:
-      AllowMethods:"'*'"
-      AllowHeaders:"'*'"
-      AllowOrigin:"'*'"
+      AllowMethods: "'*'"
+      AllowHeaders: "'*'"
+      AllowOrigin: "'*'"
